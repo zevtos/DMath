@@ -35,3 +35,4 @@
 - [ADR-0001: Выбор PostgreSQL вместо H2 для dev-окружения](./0001-postgresql-dev-environment.md)
 - [ADR-0002: Использование Spring Boot профилей](./0002-spring-boot-profiles.md)
 - [ADR-0003: API версионирование и документация](./0003-api-versioning-documentation.md)
+- [ADR-0004: Стратегия веток Git](./0004-git-branching-strategy.md)

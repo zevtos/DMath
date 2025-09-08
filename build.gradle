@@ -56,9 +56,22 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     testImplementation 'org.testcontainers:junit-jupiter'
     testImplementation 'org.testcontainers:postgresql'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+        exceptionFormat = "full"
+        showCauses = true
+        showStackTraces = true
+    }
+    afterSuite { desc, result ->
+        if (!desc.parent) {
+            println("\n=== Test summary ===")
+            println("Result: ${result.resultType}")
+            println("Tests: ${result.testCount}, Passed: ${result.successfulTestCount}, Failed: ${result.failedTestCount}, Skipped: ${result.skippedTestCount}")
+        }
+    }
 }
