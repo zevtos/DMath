@@ -1,7 +1,6 @@
 package io.github.zevtos.dmathcore.algorithm.graph;
 
 import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntGraphAdapter;
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntGraphMatrixAdapter;
 
 import java.util.*;
 

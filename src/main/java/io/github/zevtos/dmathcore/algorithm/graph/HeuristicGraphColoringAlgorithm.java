@@ -27,7 +27,7 @@ public class HeuristicGraphColoringAlgorithm {
             graph.set(i, i, -1);
         }
         return_text.append(graph.adjacencyMatrixToString()).append('\n');
-ч
+
         int[] degrees = graph.getDegrees();
         displayDegrees(degrees);
         displayHeader(numVert);
