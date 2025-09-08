@@ -25,3 +25,23 @@
 * Компонентная библиотека: MUI
 * Web API: **Canvas/WebGL**; плюс **Web Worker** для возможных вычислений на клиенте
 * Тесты: Jest + React Testing Library; e2e: Playwright; coverage ≥ 80% (цель для CI)
+
+### Технические решения
+
+Детальные технические решения и архитектурные решения вынесены в [ADR (Architecture Decision Records)](./docs/adr/README.md).
+
+### Backend Developer Quickstart
+
+- **Требования**
+  - Java 21 (Oracle), Docker Desktop (для Compose), Git.
+
+- **Запуск**
+  - Запустить PostgreSQL: `docker compose up -d postgres`
+  - Запустить приложение: `.\gradlew.bat bootRun` (Windows) или `./gradlew bootRun` (Unix)
+
+- **Тесты**
+  - `.\gradlew.bat test` (Windows) или `./gradlew test` (Unix)
+
+- **Полезные эндпоинты**
+  - Health check: `http://localhost:8080/actuator/health`
+  - API docs: `http://localhost:8080/swagger-ui.html`
