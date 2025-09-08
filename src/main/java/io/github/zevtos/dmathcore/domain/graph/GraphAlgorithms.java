@@ -6,7 +6,8 @@ import java.util.*;
  * Basic graph algorithms working with {@link Graph}.
  */
 public final class GraphAlgorithms {
-    private GraphAlgorithms() {}
+    private GraphAlgorithms() {
+    }
 
     public static <V> boolean isConnected(Graph<V> graph) {
         if (graph.getVertexCount() == 0) return true;

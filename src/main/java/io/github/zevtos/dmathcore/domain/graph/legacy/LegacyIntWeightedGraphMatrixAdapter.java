@@ -41,9 +41,13 @@ public class LegacyIntWeightedGraphMatrixAdapter {
         }
     }
 
-    public int getNumVertices() { return base.getNumVertices(); }
+    public int getNumVertices() {
+        return base.getNumVertices();
+    }
 
-    public boolean isValidVertices(int... vertices) { return base.isValidVertices(vertices); }
+    public boolean isValidVertices(int... vertices) {
+        return base.isValidVertices(vertices);
+    }
 
     public void addEdge(int a, int b) {
         base.addEdge(a, b);
@@ -58,13 +62,21 @@ public class LegacyIntWeightedGraphMatrixAdapter {
         }
     }
 
-    public boolean hasEdge(int a, int b) { return base.hasEdge(a, b); }
+    public boolean hasEdge(int a, int b) {
+        return base.hasEdge(a, b);
+    }
 
-    public void addLoop(int vertex) { base.addLoop(vertex); }
+    public void addLoop(int vertex) {
+        base.addLoop(vertex);
+    }
 
-    public boolean hasLoop(int vertex) { return base.hasLoop(vertex); }
+    public boolean hasLoop(int vertex) {
+        return base.hasLoop(vertex);
+    }
 
-    public boolean hasPath(int source, int destination) { return base.hasPath(source, destination); }
+    public boolean hasPath(int source, int destination) {
+        return base.hasPath(source, destination);
+    }
 
     public void removeVertex(int vertex) {
         base.removeVertex(vertex);
@@ -124,7 +136,9 @@ public class LegacyIntWeightedGraphMatrixAdapter {
         }
     }
 
-    public int[][] getWeightsMatrix() { return weightsMatrix; }
+    public int[][] getWeightsMatrix() {
+        return weightsMatrix;
+    }
 
     public int[][] copyWeightMatrix() {
         int n = getNumVertices();

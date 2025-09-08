@@ -3,6 +3,7 @@
 ## Последовательность добавления ADR в master
 
 ### 1. Создание ADR
+
 ```bash
 # Создание ветки для ADR (по номеру задачи Jira)
 git checkout develop
@@ -15,6 +16,7 @@ touch docs/adr/0005-frontend-framework-selection.md
 ```
 
 ### 2. Обсуждение и ревью
+
 ```bash
 # Коммит и пуш
 git add docs/adr/0005-frontend-framework-selection.md
@@ -26,6 +28,7 @@ git push origin DMATH-2322
 ```
 
 ### 3. Принятие ADR
+
 ```bash
 # После одобрения PR мержится в develop
 git checkout develop
@@ -34,6 +37,7 @@ git pull origin develop
 ```
 
 ### 4. Реализация решений из ADR
+
 ```bash
 # Создание веток для реализации (по номерам задач Jira)
 git checkout develop
@@ -42,6 +46,7 @@ git checkout -b DMATH-2313
 ```
 
 ### 5. Документирование реализации
+
 ```bash
 # Обновление статуса ADR при реализации
 # Изменение статуса с "Принято" на "Реализовано"

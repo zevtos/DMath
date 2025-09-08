@@ -5,12 +5,12 @@ import java.util.Arrays;
 
 public class CNNPropagationAlgorithm {
 
+    private final String activationFunction;
+    private final String subsamplingFunction;
     private double[][] inputMatrix;
     private double[][][] kernels;
     private int n2;
     private int n3 = 2;
-    private final String activationFunction;
-    private final String subsamplingFunction;
 
     public CNNPropagationAlgorithm(String activationFunction, String subsamplingFunction) {
         this.activationFunction = activationFunction;

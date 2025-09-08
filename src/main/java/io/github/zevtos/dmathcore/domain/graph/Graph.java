@@ -11,6 +11,68 @@ import java.util.Set;
  */
 public interface Graph<V> {
     /**
+     * Returns an unmodifiable empty graph instance. Useful for fallbacks.
+     */
+    static <T> Graph<T> empty(boolean directed) {
+        return new Graph<>() {
+            @Override
+            public boolean isDirected() {
+                return directed;
+            }
+
+            @Override
+            public Set<T> getVertices() {
+                return Collections.emptySet();
+            }
+
+            @Override
+            public boolean containsVertex(T vertex) {
+                return false;
+            }
+
+            @Override
+            public boolean addVertex(T vertex) {
+                return false;
+            }
+
+            @Override
+            public boolean removeVertex(T vertex) {
+                return false;
+            }
+
+            @Override
+            public boolean addEdge(T from, T to) {
+                return false;
+            }
+
+            @Override
+            public boolean removeEdge(T from, T to) {
+                return false;
+            }
+
+            @Override
+            public boolean hasEdge(T from, T to) {
+                return false;
+            }
+
+            @Override
+            public Set<T> getNeighbors(T vertex) {
+                return Collections.emptySet();
+            }
+
+            @Override
+            public int getVertexCount() {
+                return 0;
+            }
+
+            @Override
+            public int getEdgeCount() {
+                return 0;
+            }
+        };
+    }
+
+    /**
      * Indicates whether this graph is directed.
      */
     boolean isDirected();
@@ -96,35 +158,5 @@ public interface Graph<V> {
      */
     default int outDegree(V vertex) {
         return degree(vertex);
-    }
-
-    /**
-     * Returns an unmodifiable empty graph instance. Useful for fallbacks.
-     */
-    static <T> Graph<T> empty(boolean directed) {
-        return new Graph<>() {
-            @Override
-            public boolean isDirected() { return directed; }
-            @Override
-            public Set<T> getVertices() { return Collections.emptySet(); }
-            @Override
-            public boolean containsVertex(T vertex) { return false; }
-            @Override
-            public boolean addVertex(T vertex) { return false; }
-            @Override
-            public boolean removeVertex(T vertex) { return false; }
-            @Override
-            public boolean addEdge(T from, T to) { return false; }
-            @Override
-            public boolean removeEdge(T from, T to) { return false; }
-            @Override
-            public boolean hasEdge(T from, T to) { return false; }
-            @Override
-            public Set<T> getNeighbors(T vertex) { return Collections.emptySet(); }
-            @Override
-            public int getVertexCount() { return 0; }
-            @Override
-            public int getEdgeCount() { return 0; }
-        };
     }
 }

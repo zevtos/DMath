@@ -1,6 +1,5 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyColoredGraphMatrixAdapter;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

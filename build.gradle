@@ -31,26 +31,26 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
-    
+
     // Database migrations
     implementation 'org.flywaydb:flyway-core'
-    
+
     // OpenAPI/Swagger documentation
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
-    
+
     // Problem Details (RFC 7807) support
     implementation 'org.zalando:problem-spring-web-starter:0.29.1'
-    
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
-    
+
     // Database drivers
     runtimeOnly 'org.postgresql:postgresql'
-    
+
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
-    
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
     testImplementation 'org.springframework.security:spring-security-test'
@@ -61,11 +61,11 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
     jvmArgs = [
-        '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-        '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-        '--add-opens', 'java.base/java.lang.reflect=ALL-UNNAMED',
-        '--add-opens', 'java.base/java.text=ALL-UNNAMED',
-        '--add-opens', 'java.desktop/java.awt.font=ALL-UNNAMED'
+            '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.lang.reflect=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.text=ALL-UNNAMED',
+            '--add-opens', 'java.desktop/java.awt.font=ALL-UNNAMED'
     ]
     testLogging {
         events "passed", "skipped", "failed"

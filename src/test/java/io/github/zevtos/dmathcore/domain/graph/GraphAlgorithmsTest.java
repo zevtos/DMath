@@ -2,7 +2,10 @@ package io.github.zevtos.dmathcore.domain.graph;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,7 +46,7 @@ class GraphAlgorithmsTest {
         assertEquals(2, comps.size());
         Set<Integer> merged = new HashSet<>();
         comps.forEach(merged::addAll);
-        assertEquals(Set.of(0,1,2,3), merged);
+        assertEquals(Set.of(0, 1, 2, 3), merged);
     }
 
     @Test
@@ -52,7 +55,7 @@ class GraphAlgorithmsTest {
         g.addEdge(0, 1);
         g.addEdge(1, 2);
         g.addEdge(2, 3);
-        assertEquals(List.of(0,1,2,3), GraphAlgorithms.shortestPathBfs(g, 0, 3));
+        assertEquals(List.of(0, 1, 2, 3), GraphAlgorithms.shortestPathBfs(g, 0, 3));
 
         Graph<Integer> d = new AdjacencyListGraph<>(true);
         d.addEdge(0, 1);

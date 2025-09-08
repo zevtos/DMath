@@ -10,10 +10,8 @@ public class BronKerboschAlgorithm {
     private int a_g = 0;
     private int n_g = 0;
     private StringBuilder return_text = new StringBuilder();
-    private int[][] adjacencyMatrix;
-
+    
     public BronKerboschAlgorithm(int[][] adjacencyMatrix) {
-        this.adjacencyMatrix = adjacencyMatrix;
         this.graph = new LegacyIntGraphMatrixAdapter(adjacencyMatrix);
     }
 

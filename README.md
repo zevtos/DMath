@@ -4,8 +4,10 @@
 
 ### Кратко:
 
-* Веб-приложение для пошаговой визуализации алгоритмов (графы, кратчайшие пути, транспортные задачи, базовая NN-propagation)
-* Бэкенд решает алгоритмы(уже имеются наброски кода) и формирует протокол шагов (`steps[]`) и итог; фронт воспроизводит/объясняет шаги, анимирует и даёт перемотку
+* Веб-приложение для пошаговой визуализации алгоритмов (графы, кратчайшие пути, транспортные задачи, базовая
+  NN-propagation)
+* Бэкенд решает алгоритмы(уже имеются наброски кода) и формирует протокол шагов (`steps[]`) и итог; фронт
+  воспроизводит/объясняет шаги, анимирует и даёт перемотку
 
 ### Что планируется
 
@@ -15,7 +17,8 @@
 
 ### Набросок архитектуры
 
-* **frontend/** — Next.js + React + Tailwind + Cytoscape.js (Canvas/WebGL; редактор графов, анимации, степпер) + Redux Toolkit; реконструкция/валидация `steps[]` и симуляция на клиенте в Web Worker.
+* **frontend/** — Next.js + React + Tailwind + Cytoscape.js (Canvas/WebGL; редактор графов, анимации, степпер) + Redux
+  Toolkit; реконструкция/валидация `steps[]` и симуляция на клиенте в Web Worker.
 * **backend/** — Node.js gateway (auth/proxy) + Java-модуль с реализацией алгоритмов; API отдаёт итог и `steps[]`.
 
 ### Технический минимум
@@ -28,20 +31,21 @@
 
 ### Технические решения
 
-Детальные технические решения и архитектурные решения вынесены в [ADR (Architecture Decision Records)](./docs/adr/README.md).
+Детальные технические решения и архитектурные решения вынесены
+в [ADR (Architecture Decision Records)](./docs/adr/README.md).
 
 ### Backend Developer Quickstart
 
 - **Требования**
-  - Java 21 (Oracle), Docker Desktop (для Compose), Git.
+    - Java 21 (Oracle), Docker Desktop (для Compose), Git.
 
 - **Запуск**
-  - Запустить PostgreSQL: `docker compose up -d postgres`
-  - Запустить приложение: `.\gradlew.bat bootRun` (Windows) или `./gradlew bootRun` (Unix)
+    - Запустить PostgreSQL: `docker compose up -d postgres`
+    - Запустить приложение: `.\gradlew.bat bootRun` (Windows) или `./gradlew bootRun` (Unix)
 
 - **Тесты**
-  - `.\gradlew.bat test` (Windows) или `./gradlew test` (Unix)
+    - `.\gradlew.bat test` (Windows) или `./gradlew test` (Unix)
 
 - **Полезные эндпоинты**
-  - Health check: `http://localhost:8080/actuator/health`
-  - API docs: `http://localhost:8080/swagger-ui.html`
+    - Health check: `http://localhost:8080/actuator/health`
+    - API docs: `http://localhost:8080/swagger-ui.html`

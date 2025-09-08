@@ -1,9 +1,10 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntGraphAdapter;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,9 +1,11 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntGraphAdapter;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,9 +30,9 @@ class LegacyIntGraphAdapterExtrasTest {
     void createCompleteGraphHelper() {
         Set<Integer>[] comp = LegacyIntGraphAdapter.createCompleteGraph(3);
         assertEquals(3, comp.length);
-        assertEquals(Set.of(1,2), comp[0]);
-        assertEquals(Set.of(0,2), comp[1]);
-        assertEquals(Set.of(0,1), comp[2]);
+        assertEquals(Set.of(1, 2), comp[0]);
+        assertEquals(Set.of(0, 2), comp[1]);
+        assertEquals(Set.of(0, 1), comp[2]);
     }
 
     @Test
@@ -38,7 +40,7 @@ class LegacyIntGraphAdapterExtrasTest {
         LegacyIntGraphAdapter g = new LegacyIntGraphAdapter(3);
         g.addEdge(0, 1);
         g.addEdge(0, 2);
-        ArrayList<Integer> list = new ArrayList<>(List.of(0,1,2));
+        ArrayList<Integer> list = new ArrayList<>(List.of(0, 1, 2));
         ArrayList<Integer> res = g.subtraction(list, 0);
         assertEquals(List.of(0), res);
         assertTrue(g.isValidVertex(2));

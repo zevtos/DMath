@@ -8,7 +8,6 @@ import java.util.List;
 
 public class BellmanFordAlgorithm {
     private LegacyDoubleWeightedGraphMatrixAdapter graph;
-    private int source;
     private int target;
     private double[] distances;
     private int[] predecessors;
@@ -16,7 +15,6 @@ public class BellmanFordAlgorithm {
 
     public BellmanFordAlgorithm(LegacyDoubleWeightedGraphMatrixAdapter graph, int source, int target) {
         this.graph = graph;
-        this.source = source;
         this.target = target;
         int numVertices = graph.getNumVertices();
         this.distances = new double[numVertices];

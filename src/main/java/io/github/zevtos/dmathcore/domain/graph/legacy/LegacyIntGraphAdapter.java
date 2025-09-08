@@ -46,11 +46,27 @@ public class LegacyIntGraphAdapter {
         this.delegate = Objects.requireNonNull(delegate);
     }
 
+    public static Set<Integer>[] createCompleteGraph(int numVertices) {
+        @SuppressWarnings("unchecked")
+        Set<Integer>[] newGraph = new HashSet[numVertices];
+        for (int i = 0; i < numVertices; i++) {
+            newGraph[i] = new HashSet<>();
+            for (int j = 0; j < numVertices; j++) {
+                if (i != j) {
+                    newGraph[i].add(j);
+                }
+            }
+        }
+        return newGraph;
+    }
+
     public int getNumVertices() {
         return delegate.getVertexCount();
     }
 
-    public boolean isDirected() { return delegate.isDirected(); }
+    public boolean isDirected() {
+        return delegate.isDirected();
+    }
 
     public void addEdge(int a, int b) {
         ensureVerticesPresent(a, b);
@@ -139,20 +155,6 @@ public class LegacyIntGraphAdapter {
 
     public boolean isValidVertex(int vertex) {
         return vertex >= 0 && vertex < delegate.getVertexCount();
-    }
-
-    public static Set<Integer>[] createCompleteGraph(int numVertices) {
-        @SuppressWarnings("unchecked")
-        Set<Integer>[] newGraph = new HashSet[numVertices];
-        for (int i = 0; i < numVertices; i++) {
-            newGraph[i] = new HashSet<>();
-            for (int j = 0; j < numVertices; j++) {
-                if (i != j) {
-                    newGraph[i].add(j);
-                }
-            }
-        }
-        return newGraph;
     }
 
     public ArrayList<Integer> subtraction(ArrayList<Integer> list, int vert) {

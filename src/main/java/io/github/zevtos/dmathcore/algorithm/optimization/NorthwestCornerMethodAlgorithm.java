@@ -1,7 +1,5 @@
 package io.github.zevtos.dmathcore.algorithm.optimization;
 
-import java.util.Arrays;
-
 public class NorthwestCornerMethodAlgorithm {
     private double[][] costMatrix;
     private double[][] allocationMatrix;

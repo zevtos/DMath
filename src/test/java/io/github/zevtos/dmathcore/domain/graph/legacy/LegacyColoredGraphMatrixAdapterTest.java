@@ -1,6 +1,5 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyColoredGraphMatrixAdapter;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -33,7 +32,10 @@ class LegacyColoredGraphMatrixAdapterTest {
         boolean[] acces = new boolean[]{false, true, true, true};
         assertEquals(0, LegacyColoredGraphMatrixAdapter.getMaxDegreeVertex(degrees, acces));
         ArrayList<Integer> accesList = new ArrayList<>();
-        accesList.add(0); accesList.add(1); accesList.add(1); accesList.add(1);
+        accesList.add(0);
+        accesList.add(1);
+        accesList.add(1);
+        accesList.add(1);
         assertEquals(0, LegacyColoredGraphMatrixAdapter.getMaxDegreeVertex(degrees, accesList));
     }
 

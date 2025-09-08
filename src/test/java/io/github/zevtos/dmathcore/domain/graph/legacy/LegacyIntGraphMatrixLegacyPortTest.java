@@ -1,6 +1,5 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntGraphMatrixAdapter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

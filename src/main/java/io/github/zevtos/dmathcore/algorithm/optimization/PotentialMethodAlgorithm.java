@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class PotentialMethodAlgorithm {
 
+    StringBuilder result = new StringBuilder();
     private double[][] costMatrix;
     private double[][] allocationMatrix;
     private double[] rows;
     private double[] columns;
     private double[] u;
     private double[] v;
-    StringBuilder result = new StringBuilder();
 
     public void initialize(PotentialMethodData data) {
         this.costMatrix = data.getCostMatrix();

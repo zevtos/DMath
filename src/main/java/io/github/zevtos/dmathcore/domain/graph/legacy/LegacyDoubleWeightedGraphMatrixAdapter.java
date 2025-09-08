@@ -1,9 +1,9 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.Arrays;
 
 /**
  * Legacy-compatible double-weighted matrix graph for int vertices [0..N-1].
@@ -39,11 +39,17 @@ public class LegacyDoubleWeightedGraphMatrixAdapter {
         }
     }
 
-    public int getNumVertices() { return base.getNumVertices(); }
+    public int getNumVertices() {
+        return base.getNumVertices();
+    }
 
-    public boolean isValidVertices(int... vertices) { return base.isValidVertices(vertices); }
+    public boolean isValidVertices(int... vertices) {
+        return base.isValidVertices(vertices);
+    }
 
-    public void addEdge(int a, int b) { base.addEdge(a, b); }
+    public void addEdge(int a, int b) {
+        base.addEdge(a, b);
+    }
 
     public void removeEdge(int a, int b) {
         base.removeEdge(a, b);
@@ -53,13 +59,21 @@ public class LegacyDoubleWeightedGraphMatrixAdapter {
         }
     }
 
-    public boolean hasEdge(int a, int b) { return base.hasEdge(a, b); }
+    public boolean hasEdge(int a, int b) {
+        return base.hasEdge(a, b);
+    }
 
-    public void addLoop(int vertex) { base.addLoop(vertex); }
+    public void addLoop(int vertex) {
+        base.addLoop(vertex);
+    }
 
-    public boolean hasLoop(int vertex) { return base.hasLoop(vertex); }
+    public boolean hasLoop(int vertex) {
+        return base.hasLoop(vertex);
+    }
 
-    public boolean hasPath(int source, int destination) { return base.hasPath(source, destination); }
+    public boolean hasPath(int source, int destination) {
+        return base.hasPath(source, destination);
+    }
 
     public void removeVertex(int vertex) {
         base.removeVertex(vertex);
@@ -142,7 +156,9 @@ public class LegacyDoubleWeightedGraphMatrixAdapter {
         return zeros;
     }
 
-    public double[][] getWeightsMatrix() { return weightsMatrix; }
+    public double[][] getWeightsMatrix() {
+        return weightsMatrix;
+    }
 
     public double[][] copyWeightMatrix() {
         int n = getNumVertices();

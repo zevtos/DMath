@@ -1,11 +1,6 @@
 package io.github.zevtos.dmathcore.domain.graph;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Mutable adjacency-list based graph supporting directed and undirected modes.

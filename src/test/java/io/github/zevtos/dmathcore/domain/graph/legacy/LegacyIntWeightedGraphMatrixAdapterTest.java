@@ -1,6 +1,5 @@
 package io.github.zevtos.dmathcore.domain.graph.legacy;
 
-import io.github.zevtos.dmathcore.domain.graph.legacy.LegacyIntWeightedGraphMatrixAdapter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -71,15 +70,15 @@ class LegacyIntWeightedGraphMatrixAdapterTest {
     @Test
     void testConstructorWithMatrices() {
         int[][] adjacencyMatrix = {
-            {0, 1, 0},
-            {1, 0, 1},
-            {0, 1, 0}
+                {0, 1, 0},
+                {1, 0, 1},
+                {0, 1, 0}
         };
 
         int[][] weightsMatrix = {
-            {Integer.MAX_VALUE, 5, Integer.MAX_VALUE},
-            {5, Integer.MAX_VALUE, 10},
-            {Integer.MAX_VALUE, 10, Integer.MAX_VALUE}
+                {Integer.MAX_VALUE, 5, Integer.MAX_VALUE},
+                {5, Integer.MAX_VALUE, 10},
+                {Integer.MAX_VALUE, 10, Integer.MAX_VALUE}
         };
 
         LegacyIntWeightedGraphMatrixAdapter graph = new LegacyIntWeightedGraphMatrixAdapter(adjacencyMatrix, weightsMatrix);
