@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:17
+    container_name: dmath-postgres
     environment:
       POSTGRES_DB: dmath
       POSTGRES_USER: dmath
@@ -14,6 +15,22 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: dmath-app
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dmath
+      SPRING_DATASOURCE_USERNAME: dmath
+      SPRING_DATASOURCE_PASSWORD: dmath
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
 
 volumes:
   postgres_data:

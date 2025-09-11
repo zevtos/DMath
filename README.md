@@ -37,11 +37,29 @@
 ### Backend Developer Quickstart
 
 - **Требования**
-    - Java 21 (Oracle), Docker Desktop (для Compose), Git.
+    - Java 21 (Oracle), Docker Desktop, Git.
+
+#### Локальная разработка
 
 - **Запуск**
     - Запустить PostgreSQL: `docker compose up -d postgres`
+    - Дождаться готовности БД (проверить статус: `docker compose ps`)
     - Запустить приложение: `.\gradlew.bat bootRun` (Windows) или `./gradlew bootRun` (Unix)
+
+#### Полный запуск в Docker
+
+- **Запуск всего стека**
+    - Собрать и запустить все сервисы: `docker compose up --build`
+    - Запуск в фоне: `docker compose up -d --build`
+    - Остановка: `docker compose down`
+
+- **Docker команды**
+    - Запуск только PostgreSQL: `docker compose up -d postgres`
+    - Пересборка приложения: `docker compose build app`
+    - Просмотр логов: `docker compose logs -f app`
+    - Просмотр логов PostgreSQL: `docker compose logs -f postgres`
+    - Подключение к БД: `docker compose exec postgres psql -U dmath -d dmath`
+    - Проверка статуса: `docker compose ps`
 
 - **Тесты**
     - `.\gradlew.bat test` (Windows) или `./gradlew test` (Unix)
