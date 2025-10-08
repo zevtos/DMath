@@ -98,7 +98,7 @@ public class BellmanFordAlgorithm {
             for (double[] lambdaStep : lambda) {
                 result.append(lambdaStep[i] == Double.POSITIVE_INFINITY ? String.format("%6s", "-") : String.format("%6.1f", lambdaStep[i])).append("\t");
             }
-            result.append(lambda.getLast()[i] == Double.POSITIVE_INFINITY ? String.format("%6s", "-") : String.format("%6.1f", lambda.getLast()[i])).append("\t");
+            result.append(lambda.get(lambda.size() - 1)[i] == Double.POSITIVE_INFINITY ? String.format("%6s", "-") : String.format("%6.1f", lambda.get(lambda.size() - 1)[i])).append("\t");
             result.append("\n");
         }
 
