@@ -36,3 +36,29 @@ out/
 ### VS Code ###
 .vscode/
 *.log
+
+### front ignore file ###
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/d-math-front/node_modules
+/d-math-front/node_modules/*
+/d-math-front/.pnp
+/d-math-front/.pnp.js
+
+# testing
+/d-math-front/coverage
+
+# production
+/d-math-front/build
+
+# misc
+/d-math-front/.DS_Store
+/d-math-front/.env.local
+/d-math-front/.env.development.local
+/d-math-front/.env.test.local
+/d-math-front/.env.production.local
+
+/d-math-front/npm-debug.log*
+/d-math-front/yarn-debug.log*
+/d-math-front/yarn-error.log*
